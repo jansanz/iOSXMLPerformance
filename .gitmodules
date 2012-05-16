@@ -7,3 +7,6 @@
 [submodule "Submodules/TBXML"]
 	path = Submodules/TBXML
 	url = https://github.com/71squared/TBXML.git
+[submodule "Submodules/KissXML"]
+	path = Submodules/KissXML
+	url = https://github.com/robbiehanson/KissXML.git

@@ -42,7 +42,6 @@
 		3599576D1135E2FF00BFD4B0 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 359957681135E2FF00BFD4B0 /* tinyxml.cpp */; };
 		3599576E1135E2FF00BFD4B0 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3599576A1135E2FF00BFD4B0 /* tinystr.cpp */; };
 		359957731135E34700BFD4B0 /* TinyXMLParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 359957721135E34700BFD4B0 /* TinyXMLParser.mm */; };
-		359958921136100800BFD4B0 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 359958911136100800BFD4B0 /* GDataXMLNode.m */; };
 		359958971136106800BFD4B0 /* GDataXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359958961136106800BFD4B0 /* GDataXMLParser.m */; };
 		98C96BD91563454800AD793E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BD81563454800AD793E /* RXMLElement.m */; };
 		98C96BDD1563462B00AD793E /* RaptureXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BDC1563462B00AD793E /* RaptureXMLParser.m */; };
@@ -65,6 +64,7 @@
 		98C96C4115635ACC00AD793E /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3815635ACC00AD793E /* DDXMLDocument.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		98C96C4215635ACC00AD793E /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3A15635ACC00AD793E /* DDXMLElement.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		98C96C4315635ACC00AD793E /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3C15635ACC00AD793E /* DDXMLNode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		98C96C4615635DA000AD793E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C4515635DA000AD793E /* GDataXMLNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,8 +124,6 @@
 		3599576A1135E2FF00BFD4B0 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
 		359957711135E34700BFD4B0 /* TinyXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinyXMLParser.h; sourceTree = "<group>"; };
 		359957721135E34700BFD4B0 /* TinyXMLParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TinyXMLParser.mm; sourceTree = "<group>"; };
-		359958901136100800BFD4B0 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		359958911136100800BFD4B0 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		359958951136106800BFD4B0 /* GDataXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLParser.h; sourceTree = "<group>"; };
 		359958961136106800BFD4B0 /* GDataXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLParser.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +172,8 @@
 		98C96C3B15635ACC00AD793E /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
 		98C96C3C15635ACC00AD793E /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
 		98C96C3E15635ACC00AD793E /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		98C96C4415635DA000AD793E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = Submodules/GDataXML/GDataXMLNode.h; sourceTree = "<group>"; };
+		98C96C4515635DA000AD793E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = Submodules/GDataXML/GDataXMLNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,8 +326,8 @@
 		3599588F11360FFE00BFD4B0 /* GDataXML */ = {
 			isa = PBXGroup;
 			children = (
-				359958901136100800BFD4B0 /* GDataXMLNode.h */,
-				359958911136100800BFD4B0 /* GDataXMLNode.m */,
+				98C96C4415635DA000AD793E /* GDataXMLNode.h */,
+				98C96C4515635DA000AD793E /* GDataXMLNode.m */,
 			);
 			name = GDataXML;
 			sourceTree = "<group>";
@@ -529,7 +529,6 @@
 				3599576D1135E2FF00BFD4B0 /* tinyxml.cpp in Sources */,
 				3599576E1135E2FF00BFD4B0 /* tinystr.cpp in Sources */,
 				359957731135E34700BFD4B0 /* TinyXMLParser.mm in Sources */,
-				359958921136100800BFD4B0 /* GDataXMLNode.m in Sources */,
 				359958971136106800BFD4B0 /* GDataXMLParser.m in Sources */,
 				3541B4491136D95E00298D56 /* LibXMLDOMParser.m in Sources */,
 				98C96BD91563454800AD793E /* RXMLElement.m in Sources */,
@@ -553,6 +552,7 @@
 				98C96C4115635ACC00AD793E /* DDXMLDocument.m in Sources */,
 				98C96C4215635ACC00AD793E /* DDXMLElement.m in Sources */,
 				98C96C4315635ACC00AD793E /* DDXMLNode.m in Sources */,
+				98C96C4615635DA000AD793E /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

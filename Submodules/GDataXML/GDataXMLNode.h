@@ -42,8 +42,8 @@
 #import <libxml/xpathInternals.h>
 
 
-#if (MAC_OS_X_VERSION_MAX_ALLOWED <= MAC_OS_X_VERSION_10_4) || defined(GDATA_TARGET_NAMESPACE)
-  // we need NSInteger for the 10.4 SDK, or we're using target namespace macros
+#ifdef GDATA_TARGET_NAMESPACE
+  // we're using target namespace macros
   #import "GDataDefines.h"
 #endif
 
@@ -53,7 +53,11 @@
 #define _EXTERN
 #define _INITIALIZE_AS(x) =x
 #else
+#if defined(__cplusplus)
+#define _EXTERN extern "C"
+#else
 #define _EXTERN extern
+#endif
 #define _INITIALIZE_AS(x)
 #endif
 
@@ -90,7 +94,7 @@ enum {
 
 typedef NSUInteger GDataXMLNodeKind;
 
-@interface GDataXMLNode : NSObject {
+@interface GDataXMLNode : NSObject <NSCopying> {
 @protected
   // NSXMLNodes can have a namespace URI or prefix even if not part
   // of a tree; xmlNodes cannot.  When we create nodes apart from
@@ -169,6 +173,7 @@ typedef NSUInteger GDataXMLNodeKind;
 - (void)setNamespaces:(NSArray *)namespaces;
 - (void)addNamespace:(GDataXMLNode *)aNamespace;
 
+// addChild adds a copy of the child node to the element
 - (void)addChild:(GDataXMLNode *)child;
 - (void)removeChild:(GDataXMLNode *)child;
 
@@ -191,6 +196,8 @@ typedef NSUInteger GDataXMLNodeKind;
 
 - (id)initWithXMLString:(NSString *)str options:(unsigned int)mask error:(NSError **)error;
 - (id)initWithData:(NSData *)data options:(unsigned int)mask error:(NSError **)error;
+
+// initWithRootElement uses a copy of the argument as the new document's root
 - (id)initWithRootElement:(GDataXMLElement *)element;
 
 - (GDataXMLElement *)rootElement;

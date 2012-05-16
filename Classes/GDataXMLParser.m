@@ -74,9 +74,9 @@
 static NSString *kXPath_Item = @"//item";
 static NSString *kName_Title = @"title";
 static NSString *kName_Category = @"category";
-static NSString *kName_Artist = @"artist";
-static NSString *kName_Album = @"album";
-static NSString *kName_ReleaseDate = @"releasedate";
+static NSString *kName_Artist = @"itms:artist";
+static NSString *kName_Album = @"itms:album";
+static NSString *kName_ReleaseDate = @"itms:releasedate";
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [self performSelectorOnMainThread:@selector(downloadEnded) withObject:nil waitUntilDone:NO];

@@ -378,6 +378,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
 
   if (xmlNode_ && shouldFreeXMLNode_) {
     xmlFreeNode(xmlNode_);
+    xmlNode_ = NULL;
   }
 
   [self releaseCachedValues];
@@ -692,6 +693,8 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
                      error:(NSError **)error {
 
   NSMutableArray *array = nil;
+  NSInteger errorCode = -1;
+  NSDictionary *errorInfo = nil;
 
   // xmlXPathNewContext requires a doc for its context, but if our elements
   // are created from GDataXMLElement's initWithXMLString there may not be
@@ -796,25 +799,29 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
           }
         }
         xmlXPathFreeObject(xpathObj);
+      } else {
+        // provide an error for failed evaluation
+        const char *msg = xpathCtx->lastError.str1;
+        errorCode = xpathCtx->lastError.code;
+        if (msg) {
+          NSString *errStr = [NSString stringWithUTF8String:msg];
+          errorInfo = [NSDictionary dictionaryWithObject:errStr
+                                                  forKey:@"error"];
+        }
       }
+
       xmlXPathFreeContext(xpathCtx);
     }
+  } else {
+    // not a valid node for using XPath
+    errorInfo = [NSDictionary dictionaryWithObject:@"invalid node"
+                                            forKey:@"error"];
+  }
 
-    if (array == nil) {
-
-      // provide an error
-      //
-      // TODO(grobbins) obtain better xpath and libxml errors
-      const char *msg = xpathCtx->lastError.str1;
-      NSDictionary *userInfo = nil;
-      if (msg) {
-        userInfo = [NSDictionary dictionaryWithObject:[NSString stringWithUTF8String:msg]
-                                               forKey:@"error"];
-      }
-      *error = [NSError errorWithDomain:@"com.google.GDataXML"
-                                   code:xpathCtx->lastError.code
-                               userInfo:userInfo];
-    }
+  if (array == nil && error != nil) {
+    *error = [NSError errorWithDomain:@"com.google.GDataXML"
+                                 code:errorCode
+                             userInfo:errorInfo];
   }
 
   if (tempDoc != NULL) {
@@ -912,6 +919,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
       xmlNodePtr root = xmlDocGetRootElement(doc);
       if (root) {
         xmlNode_ = xmlCopyNode(root, 1); // 1: recursive
+        shouldFreeXMLNode_ = YES;
       }
       xmlFreeDoc(doc);
     }
@@ -971,10 +979,10 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
 
     // add a namespace for each object in the array
     NSEnumerator *enumerator = [namespaces objectEnumerator];
-    GDataXMLNode *namespace;
-    while ((namespace = [enumerator nextObject]) != nil) {
+    GDataXMLNode *namespaceNode;
+    while ((namespaceNode = [enumerator nextObject]) != nil) {
 
-      xmlNsPtr ns = (xmlNsPtr) [namespace XMLNode];
+      xmlNsPtr ns = (xmlNsPtr) [namespaceNode XMLNode];
       if (ns) {
         (void)xmlNewNs(xmlNode_, ns->href, ns->prefix);
       }
@@ -1511,7 +1519,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
     NSValue *replacementNS = [nsMap objectForKey:currNS];
 
     if (replacementNS != nil) {
-      xmlNsPtr replaceNSPtr = [replacementNS pointerValue];
+      xmlNsPtr replaceNSPtr = (xmlNsPtr)[replacementNS pointerValue];
 
       xmlSetNs(nodeToFix, replaceNSPtr);
     }
@@ -1610,7 +1618,7 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
     const char *encoding = NULL;
 
     // NOTE: We are assuming [data length] fits into an int.
-    xmlDoc_ = xmlReadMemory([data bytes], (int)[data length], baseURL, encoding,
+    xmlDoc_ = xmlReadMemory((const char*)[data bytes], (int)[data length], baseURL, encoding,
                             kGDataXMLParseOptions); // TODO(grobbins) map option values
     if (xmlDoc_ == NULL) {
       if (error) {
@@ -1618,8 +1626,8 @@ static xmlChar *SplitQNameReverse(const xmlChar *qname, xmlChar **prefix) {
                                     code:-1
                                 userInfo:nil];
         // TODO(grobbins) use xmlSetGenericErrorFunc to capture error
-        [self release];
       }
+      [self release];
       return nil;
     } else {
       if (error) *error = NULL;

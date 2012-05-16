@@ -50,7 +50,7 @@
 
 @class Song;
 
-@interface CocoaXMLParser : iTunesRSSParser {
+@interface CocoaXMLParser : iTunesRSSParser <NSXMLParserDelegate> {
     NSMutableString *currentString;
     Song *currentSong;
     BOOL storingCharacters;

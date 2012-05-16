@@ -1,7 +1,7 @@
 /*
-     File: CocoaXMLParser.m
+ File: CocoaXMLParser.m
  Abstract: Subclass of iTunesRSSParser that uses the Foundation framework's NSXMLParser for parsing the XML data.
-  Version: 1.2
+ Version: 1.3
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,9 +41,9 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2009 Apple Inc. All Rights Reserved.
+ Copyright (C) 2010 Apple Inc. All Rights Reserved.
  
-*/
+ */
 
 #import "CocoaXMLParser.h"
 #import "Song.h"
@@ -61,8 +61,9 @@
 @synthesize currentString, currentSong, parseFormatter, xmlData, rssConnection, downloadAndParsePool;
 
 - (void)downloadAndParse:(NSURL *)url {
-//    self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
+    //    self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
     @autoreleasepool {
+        
         done = NO;
         self.parseFormatter = [[[NSDateFormatter alloc] init] autorelease];
         [parseFormatter setDateStyle:NSDateFormatterLongStyle];
@@ -84,8 +85,8 @@
         self.rssConnection = nil;
         self.parseFormatter = nil;
         self.currentSong = nil;
-//        [downloadAndParsePool release];
-//        self.downloadAndParsePool = nil;
+        //    [downloadAndParsePool release];
+        //    self.downloadAndParsePool = nil;
     }
 }
 
@@ -141,8 +142,8 @@ static const NSUInteger kAutoreleasePoolPurgeFrequency = 20;
     // size of the objects being parsed. The goal is to keep the autorelease pool from growing too large, but 
     // taking this action too frequently would be wasteful and reduce performance.
     if (countOfParsedSongs == kAutoreleasePoolPurgeFrequency) {
-//        [downloadAndParsePool release];
-//        self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
+        //        [downloadAndParsePool release];
+        //        self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
         countOfParsedSongs = 0;
     }
 }

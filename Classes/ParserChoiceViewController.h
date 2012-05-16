@@ -1,7 +1,7 @@
 /*
-     File: ParserChoiceViewController.h
+ File: ParserChoiceViewController.h
  Abstract: Provides an interface for choosing and running one of the two available parsers.
-  Version: 1.2
+ Version: 1.3
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,9 +41,9 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2009 Apple Inc. All Rights Reserved.
+ Copyright (C) 2010 Apple Inc. All Rights Reserved.
  
-*/
+ */
 
 #import <UIKit/UIKit.h>
 
@@ -55,7 +55,7 @@
     NSIndexPath *parserSelection;
     UIButton *startButton;
 }
- 
+
 @property (nonatomic, retain) IBOutlet UIButton *startButton;
 @property (nonatomic, retain, readonly) UINavigationController *songsNavigationController;
 @property (nonatomic, retain, readonly) SongsViewController *songsViewController;

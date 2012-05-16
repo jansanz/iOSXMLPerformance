@@ -1,7 +1,7 @@
 /*
-     File: LibXMLParser.m
+ File: LibXMLParser.m
  Abstract: Subclass of iTunesRSSParser that uses libxml2 for parsing the XML data.
-  Version: 1.2
+ Version: 1.3
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,9 +41,9 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2009 Apple Inc. All Rights Reserved.
+ Copyright (C) 2010 Apple Inc. All Rights Reserved.
  
-*/
+ */
 
 #import "LibXMLParser.h"
 #import "Song.h"
@@ -72,11 +72,12 @@ static xmlSAXHandler simpleSAXHandlerStruct;
 }
 
 /*
-This method is called on a secondary thread by the superclass. We have asynchronous work to do here with downloading and parsing data, so we will need a run loop to prevent the thread from exiting before we are finished.
-*/
+ This method is called on a secondary thread by the superclass. We have asynchronous work to do here with downloading and parsing data, so we will need a run loop to prevent the thread from exiting before we are finished.
+ */
 - (void)downloadAndParse:(NSURL *)url {
-//    self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
+    //    self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
     @autoreleasepool {
+        
         done = NO;
         self.parseFormatter = [[[NSDateFormatter alloc] init] autorelease];
         [parseFormatter setDateStyle:NSDateFormatterLongStyle];
@@ -107,15 +108,15 @@ This method is called on a secondary thread by the superclass. We have asynchron
         self.rssConnection = nil;
         self.currentSong = nil;
     }
-//    [downloadAndParsePool release];
-//    self.downloadAndParsePool = nil;
+    //    [downloadAndParsePool release];
+    //    self.downloadAndParsePool = nil;
 }
 
 #pragma mark NSURLConnection Delegate methods
 
 /*
-Disable caching so that each time we run this app we are starting with a clean slate. You may not want to do this in your application.
-*/
+ Disable caching so that each time we run this app we are starting with a clean slate. You may not want to do this in your application.
+ */
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse {
     return nil;
 }
@@ -161,14 +162,14 @@ static const NSUInteger kAutoreleasePoolPurgeFrequency = 20;
     // size of the objects being parsed. The goal is to keep the autorelease pool from growing too large, but 
     // taking this action too frequently would be wasteful and reduce performance.
     if (countOfParsedSongs == kAutoreleasePoolPurgeFrequency) {
-//        [downloadAndParsePool release];
-//        self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
+        [downloadAndParsePool release];
+        self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
         countOfParsedSongs = 0;
     }
 }
 
 /*
-    Character data is appended to a buffer until the current element ends.
+ Character data is appended to a buffer until the current element ends.
  */
 - (void)appendCharacters:(const char *)charactersFound length:(NSInteger)length {
     [characterBuffer appendBytes:charactersFound length:length];
@@ -258,7 +259,7 @@ static void	endElementSAX(void *ctx, const xmlChar *localname, const xmlChar *pr
 
 /*
  This callback is invoked when the parser encounters character data inside a node. The parser class determines how to use the character data.
-*/
+ */
 static void	charactersFoundSAX(void *ctx, const xmlChar *ch, int len) {
     LibXMLParser *parser = (LibXMLParser *)ctx;
     // A state variable, "storingCharacters", is set when nodes of interest begin and end. 

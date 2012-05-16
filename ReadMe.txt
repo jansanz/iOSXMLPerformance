@@ -25,7 +25,7 @@ For large datasets, developers should test their application with an iPhone or i
 
 Memory:
 
-NSXMLParser be used with either a NSURL or a NSData. In both cases, all of the XML data is loaded into memory. On iPhone OS, this can be a very significant consideration. The actual parsing will require additional memory, particularly with intermediate objects created and autoreleased. You can create and destroy additional autorelease pools in the course of parsing, and mitigate this somewhat, but you are still managing the memory pool on top of the initial allocation for the XML data itself.
+NSXMLParser be used with either a NSURL or a NSData. In both cases, all of the XML data is loaded into memory. On iOS, this can be a very significant consideration. The actual parsing will require additional memory, particularly with intermediate objects created and autoreleased. You can create and destroy additional autorelease pools in the course of parsing, and mitigate this somewhat, but you are still managing the memory pool on top of the initial allocation for the XML data itself.
 
 With libxml, you can parse XML data in chunks. This alleviates the need to have all of the data in memory at one time, possibly resulting in a considerably smaller memory footprint. This could be applied to data downloaded using NSURLConnection. The NSURLConnection delegate method connection:didReceiveData: may be called multiple times during a download, and rather than accumulate the data, it can be immediately passed to the libxml parser. When the parser is finished, the data can be discarded. In addition, libxml callbacks use C strings rather than Objective C objects. In general, the overhead for objects is not significant, but in large numbers, in tight loops, this adds up. In particular, when the character data in an XML element is parsed, that data is delivered as one or more parse "events". For NSXMLParser, these events result as the delegate method parser:foundCharacters:, with an autoreleased NSString as the container for the character data. In libxml, the events call in the registered callback function, passing a pointer to a C string buffer. This offers another opportunity to optimize on memory management. Rather than creating an object with each call of the function, the character data can be accumulated in a separate buffer, until all data for the current XML element has been handled. Only at that point does a NSString object need to be created.
 
@@ -44,7 +44,7 @@ This sample includes some screenshots and a sample trace document from Instrumen
 ===========================================================================
 SYSTEM REQUIREMENTS
 
-iPhone SDK 3.0
+Mac OS X 10.6, Xcode 3.2.3, iOS 4.0
 
 ===========================================================================
 PACKAGING LIST
@@ -84,9 +84,10 @@ Launches the application.
 
 ===========================================================================
 CHANGES FROM PREVIOUS VERSIONS
-
+1.3 Minor updates for iOS 4.0.
+1.2 Fixed a memory leak in LibXMLParser implementation of the NSURLConnection delegate method -connectionDidFinishLoading:. Improved autorelease pool management in Cocoa parser.
 1.1 Updated user interface for iPhone SDK 3.0 and fixed bug in Xcode build setting for header search paths.
 1.0 Initial version published.
 
 ===========================================================================
-Copyright (C) 2008 Apple Inc. All rights reserved.
+Copyright (C) 2010 Apple Inc. All rights reserved.

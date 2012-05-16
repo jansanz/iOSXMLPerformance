@@ -1,7 +1,7 @@
 /*
-     File: Statistics.h
+ File: Statistics.h
  Abstract: Collection of C functions for database storage of parser performance metrics.
-  Version: 1.2
+ Version: 1.3
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,7 +41,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2009 Apple Inc. All Rights Reserved.
+ Copyright (C) 2010 Apple Inc. All Rights Reserved.
  
  */
 
@@ -49,10 +49,10 @@
 #import "iTunesRSSParser.h"
 
 /* 
-These functions encapsulate all interactions with a SQLite database used to store the amount of time taken to download 
-and parse XML data. The measurements are stored by parser type, and aggregate queries retrieve the mean measurements, again
-by parser type.
-*/ 
+ These functions encapsulate all interactions with a SQLite database used to store the amount of time taken to download 
+ and parse XML data. The measurements are stored by parser type, and aggregate queries retrieve the mean measurements, again
+ by parser type.
+ */ 
 
 // Close the database. This should be called when the application terminates.
 void CloseStatisticsDatabase(void);

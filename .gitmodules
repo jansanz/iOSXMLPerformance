@@ -1,3 +1,6 @@
 [submodule "Submodules/RaptureXML"]
 	path = Submodules/RaptureXML
 	url = https://github.com/ZaBlanc/RaptureXML
+[submodule "Submodules/TouchXML"]
+	path = Submodules/TouchXML
+	url = https://github.com/TouchCode/TouchXML.git

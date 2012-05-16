@@ -82,7 +82,8 @@ static NSString *kName_ReleaseDate = @"itms:releasedate";
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [self performSelectorOnMainThread:@selector(downloadEnded) withObject:nil waitUntilDone:NO];
     NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
-    TBXML * tbxml = [[TBXML alloc] initWithXMLData:xmlData];
+    NSError *error;
+    TBXML * tbxml = [[TBXML alloc] initWithXMLData:xmlData error:&error];
     TBXMLElement *root = tbxml.rootXMLElement;
     if (root) {
         TBXMLElement * channel = [TBXML childElementNamed:kName_Channel parentElement:root];

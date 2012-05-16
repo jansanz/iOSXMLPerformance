@@ -4,3 +4,6 @@
 [submodule "Submodules/TouchXML"]
 	path = Submodules/TouchXML
 	url = https://github.com/TouchCode/TouchXML.git
+[submodule "Submodules/TBXML"]
+	path = Submodules/TBXML
+	url = https://github.com/71squared/TBXML.git

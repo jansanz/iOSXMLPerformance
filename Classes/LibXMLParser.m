@@ -157,6 +157,7 @@ static const NSUInteger kAutoreleasePoolPurgeFrequency = 20;
     // performSelectorOnMainThread: will retain the object until the selector has been performed
     // setting the local reference to nil ensures that the local reference will be released
     self.currentSong = nil;
+    /*
     countOfParsedSongs++;
     // Periodically purge the autorelease pool. The frequency of this action may need to be tuned according to the 
     // size of the objects being parsed. The goal is to keep the autorelease pool from growing too large, but 
@@ -166,6 +167,7 @@ static const NSUInteger kAutoreleasePoolPurgeFrequency = 20;
         self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
         countOfParsedSongs = 0;
     }
+     */
 }
 
 /*

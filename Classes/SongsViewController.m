@@ -163,7 +163,7 @@
 }
 
 - (IBAction)returnToParserChoices {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark <iTunesRSSParserDelegate> Implementation

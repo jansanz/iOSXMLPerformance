@@ -95,7 +95,7 @@
 }
 
 - (IBAction)startParser {
-    [self.navigationController presentModalViewController:self.songsNavigationController animated:YES];
+    [self.navigationController presentViewController:self.songsNavigationController animated:YES completion:nil];
     //     [self.navigationController pushViewController:self.songsViewController animated:YES];
     [self.songsViewController parseWithParserType:self.parserSelection.row];
 }

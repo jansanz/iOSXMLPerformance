@@ -10,3 +10,6 @@
 [submodule "Submodules/KissXML"]
 	path = Submodules/KissXML
 	url = https://github.com/robbiehanson/KissXML.git
+[submodule "Submodules/tinyxml2"]
+	path = Submodules/tinyxml2
+	url = https://github.com/leethomason/tinyxml2.git

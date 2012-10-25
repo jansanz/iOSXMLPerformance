@@ -15,7 +15,6 @@
 		3013ACCB0E5CD0BC00DFF042 /* Stat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3013ACC60E5CD0BC00DFF042 /* Stat.png */; };
 		3013ACCC0E5CD0BC00DFF042 /* XML.png in Resources */ = {isa = PBXBuildFile; fileRef = 3013ACC80E5CD0BC00DFF042 /* XML.png */; };
 		3013ADBC0E5E099600DFF042 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3013ADBA0E5E099600DFF042 /* Default.png */; };
-		3097D68B0E392CCC00159D5D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3097D6870E392CCC00159D5D /* MainWindow.xib */; };
 		3097D68C0E392CCC00159D5D /* StatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3097D6890E392CCC00159D5D /* StatsView.xib */; };
 		3097D6920E392ED500159D5D /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D6910E392ED500159D5D /* SongsViewController.m */; };
 		3097D6B40E392FAD00159D5D /* ParserChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D6B30E392FAD00159D5D /* ParserChoiceViewController.m */; };
@@ -65,6 +64,7 @@
 		98C96C4215635ACC00AD793E /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3A15635ACC00AD793E /* DDXMLElement.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		98C96C4315635ACC00AD793E /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3C15635ACC00AD793E /* DDXMLNode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		98C96C4615635DA000AD793E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C4515635DA000AD793E /* GDataXMLNode.m */; };
+		98ED78811638F27300171FF5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98ED78801638F27300171FF5 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +81,6 @@
 		3013ACC90E5CD0BC00DFF042 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/XML.png; sourceTree = "<group>"; };
 		3013ACF00E5CD69000DFF042 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		3013ADBB0E5E099600DFF042 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/Default.png; sourceTree = "<group>"; };
-		3097D6880E392CCC00159D5D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		3097D68A0E392CCC00159D5D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StatsView.xib; sourceTree = "<group>"; };
 		3097D6900E392ED500159D5D /* SongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsViewController.h; sourceTree = "<group>"; };
 		3097D6910E392ED500159D5D /* SongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsViewController.m; sourceTree = "<group>"; };
@@ -174,6 +173,7 @@
 		98C96C3E15635ACC00AD793E /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
 		98C96C4415635DA000AD793E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = Submodules/GDataXML/GDataXMLNode.h; sourceTree = "<group>"; };
 		98C96C4515635DA000AD793E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = Submodules/GDataXML/GDataXMLNode.m; sourceTree = "<group>"; };
+		98ED78801638F27300171FF5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +245,7 @@
 		29B97314FDCFA39411CA2CEA /* XMLPerformance */ = {
 			isa = PBXGroup;
 			children = (
+				98ED78801638F27300171FF5 /* Default-568h@2x.png */,
 				98C96C2F15635ACC00AD793E /* KissXML */,
 				98C96C011563571E00AD793E /* TouchXML */,
 				98C96BD61563454800AD793E /* RaptureXML */,
@@ -279,7 +280,6 @@
 				3013ADBA0E5E099600DFF042 /* Default.png */,
 				3013ACC60E5CD0BC00DFF042 /* Stat.png */,
 				3013ACC80E5CD0BC00DFF042 /* XML.png */,
-				3097D6870E392CCC00159D5D /* MainWindow.xib */,
 				30CB63DC0FBB5A1200E8B09E /* ParserChoiceView.xib */,
 				3097D6890E392CCC00159D5D /* StatsView.xib */,
 				30F20C500EC3618100F74FAC /* Localizable.strings */,
@@ -491,7 +491,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3097D68B0E392CCC00159D5D /* MainWindow.xib in Resources */,
 				3097D68C0E392CCC00159D5D /* StatsView.xib in Resources */,
 				30EC989A0E3A507B0042536C /* stats.sqlite in Resources */,
 				3013ACCB0E5CD0BC00DFF042 /* Stat.png in Resources */,
@@ -499,6 +498,7 @@
 				3013ADBC0E5E099600DFF042 /* Default.png in Resources */,
 				30F20C520EC3618100F74FAC /* Localizable.strings in Resources */,
 				30CB63DE0FBB5A1200E8B09E /* ParserChoiceView.xib in Resources */,
+				98ED78811638F27300171FF5 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,14 +583,6 @@
 			name = Default.png;
 			sourceTree = "<group>";
 		};
-		3097D6870E392CCC00159D5D /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3097D6880E392CCC00159D5D /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
 		3097D6890E392CCC00159D5D /* StatsView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -629,6 +621,7 @@
 				GCC_PREFIX_HEADER = Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"$(SDK_DIR)\"/usr/include/libxml2";
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = XMLPerformance;
 			};
@@ -643,6 +636,7 @@
 				GCC_PREFIX_HEADER = Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"$(SDK_DIR)\"/usr/include/libxml2";
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = XMLPerformance;
 			};

@@ -47,21 +47,42 @@
 
 #import "AppDelegate.h"
 #import "Statistics.h"
+#import "ParserChoiceViewController.h"
+#import "StatsViewController.h"
 
 @implementation AppDelegate
 
-@synthesize window;
-@synthesize tabBarController;
-
 - (void)dealloc {
-	[tabBarController release];
-	[window release];
+	[_tabBarController release];
+	[_window release];
 	[super dealloc];
 }
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {	
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {	
 	// Add the tab bar controller's current view as a subview of the window
-	[window addSubview:tabBarController.view];
+    
+    // Multiple screen sizes
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
+    UIViewController *viewController1, *viewController2;
+    
+    viewController1 = [[[UINavigationController alloc] initWithRootViewController:[[[ParserChoiceViewController alloc] initWithNibName:@"ParserChoiceView" bundle:nil] autorelease]] autorelease];
+    viewController2 = [[[UINavigationController alloc] initWithRootViewController:[[[StatsViewController alloc] initWithNibName:@"StatsView" bundle:nil] autorelease]] autorelease];
+    
+    [viewController1.tabBarItem setImage:[UIImage imageNamed:@"XML"]];
+    [viewController2.tabBarItem setImage:[UIImage imageNamed:@"Stat"]];
+    
+    [viewController1 setTitle:@"Parse"];
+    [viewController2 setTitle:@"Stats"];
+    
+    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    
+    self.window.rootViewController = self.tabBarController;
+    
+    [self.window makeKeyAndVisible];
+    
+    return YES;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

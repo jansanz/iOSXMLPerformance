@@ -59,25 +59,30 @@
 
 @implementation ParserChoiceViewController
 
-@synthesize parserSelection, startButton;
+@synthesize parserSelection;
 
 - (void)dealloc {
     [songsNavigationController release];
     [songsViewController release];
     [parserSelection release];
-    [startButton release];
 	[super dealloc];
 }
 
 - (void)viewDidLoad {
+    
+    [super viewDidLoad];
     // Set the background for the main view to match the table view.
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     // Set an initial selection.
     self.parserSelection = [NSIndexPath indexPathForRow:0 inSection:0];
+    
+    [self setTitle:@"Parsers"];
+    
+    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleDone target:self action:@selector(startParserButtonPressed:)] autorelease]];
 }
 
 - (void)viewDidUnload {
-    self.startButton = nil;
+    [super viewDidUnload];
 }
 
 - (SongsViewController *)songsViewController {
@@ -94,7 +99,7 @@
     return songsNavigationController;
 }
 
-- (IBAction)startParser {
+- (void)startParserButtonPressed:(id)sender {
     [self.navigationController presentViewController:self.songsNavigationController animated:YES completion:nil];
     //     [self.navigationController pushViewController:self.songsViewController animated:YES];
     [self.songsViewController parseWithParserType:self.parserSelection.row];

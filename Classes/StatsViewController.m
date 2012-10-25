@@ -76,6 +76,10 @@
     // need to be of varying heights, the rowHeight property should be used.
     tableView.allowsSelection = NO;
     tableView.rowHeight = 31;
+    
+    [self setTitle:@"Stats"];
+    
+    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithTitle:@"Reset" style:UIBarButtonItemStyleDone target:self action:@selector(resetButtonPressed:)] autorelease]];
 }
 
 - (void)viewDidUnload {
@@ -155,7 +159,8 @@
     return [NSString stringWithFormat:format, parserName, numberOfRuns];
 }
 
-- (IBAction)resetStatistics {
+- (void)resetButtonPressed:(id)sender
+{
     ResetStatisticsDatabase();
     [tableView reloadData];
 }

@@ -53,14 +53,12 @@
     UINavigationController *songsNavigationController;
     SongsViewController *songsViewController;
     NSIndexPath *parserSelection;
-    UIButton *startButton;
 }
 
-@property (nonatomic, retain) IBOutlet UIButton *startButton;
 @property (nonatomic, retain, readonly) UINavigationController *songsNavigationController;
 @property (nonatomic, retain, readonly) SongsViewController *songsViewController;
 @property (nonatomic, retain) NSIndexPath *parserSelection;
 
-- (IBAction)startParser;
+- (void)startParserButtonPressed:(id)sender;
 
 @end

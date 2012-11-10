@@ -44,7 +44,7 @@
 		98A56B3F164EDC6A009A4B8C /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3B164EDC6A009A4B8C /* tinyxmlparser.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		98A56B47164EF454009A4B8C /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B45164EF454009A4B8C /* tinyxml2.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		98A56B4A164EF518009A4B8C /* TinyXML2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B49164EF518009A4B8C /* TinyXML2Parser.m */; };
-		98C96BD91563454800AD793E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BD81563454800AD793E /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96BD91563454800AD793E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BD81563454800AD793E /* RXMLElement.m */; };
 		98C96BDD1563462B00AD793E /* RaptureXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BDC1563462B00AD793E /* RaptureXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		98C96C1F1563573B00AD793E /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C041563573B00AD793E /* CXMLDocument_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		98C96C201563573C00AD793E /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C061563573B00AD793E /* CXMLNode_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };

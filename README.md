@@ -6,6 +6,8 @@ which in turn is based on Apple's [XMLPerformance](http://developer.apple.com/li
 
 Support for RaptureXML was added as well as all XML parsing libraries have been updated to their latest versions.
 
+ARC required. Some XML parsing libraries might not be ARC enabled.
+
 ## **Instructions**
 1. Clone this project
 2. git submodule init && git submodule update

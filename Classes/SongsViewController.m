@@ -147,12 +147,12 @@
         cell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    cell.textLabel.text = [[songs objectAtIndex:indexPath.row] title];
+    cell.textLabel.text = [songs[indexPath.row] title];
     return cell;
 }
 
 - (void)tableView:(UITableView *)table didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.detailController.song = [songs objectAtIndex:indexPath.row];
+    self.detailController.song = songs[indexPath.row];
     [self.navigationController pushViewController:self.detailController animated:YES];
 }
 

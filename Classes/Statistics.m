@@ -66,7 +66,7 @@ sqlite3 *Database(void) {
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSError *error;
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *documentsDirectory = paths[0];
         NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"stats.sqlite"];
         if ([fileManager fileExistsAtPath:writableDBPath] == NO) {
             // The writable database does not exist, so copy the default to the appropriate location.

@@ -120,7 +120,7 @@ static NSString *kName_ReleaseDate = @"itms:releasedate";
         }
     }
     NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
-    [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:[NSNumber numberWithDouble:duration] waitUntilDone:NO];
+    [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:@(duration) waitUntilDone:NO];
     [self performSelectorOnMainThread:@selector(parseEnded) withObject:nil waitUntilDone:NO];
     self.xmlData = nil;
     // Set the condition which ends the run loop.

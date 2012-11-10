@@ -131,7 +131,7 @@ static xmlSAXHandler simpleSAXHandlerStruct;
     // Process the downloaded chunk of data.
     xmlParseChunk(context, (const char *)[data bytes], [data length], 0);
     NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
-    [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:[NSNumber numberWithDouble:duration] waitUntilDone:NO];
+    [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:@(duration) waitUntilDone:NO];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -140,7 +140,7 @@ static xmlSAXHandler simpleSAXHandlerStruct;
     // Signal the context that parsing is complete by passing "1" as the last parameter.
     xmlParseChunk(context, NULL, 0, 1);
     NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
-    [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:[NSNumber numberWithDouble:duration] waitUntilDone:NO];
+    [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:@(duration) waitUntilDone:NO];
     [self performSelectorOnMainThread:@selector(parseEnded) withObject:nil waitUntilDone:NO];
     // Set the condition which ends the run loop.
     done = YES; 

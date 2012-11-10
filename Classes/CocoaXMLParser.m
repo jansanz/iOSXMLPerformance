@@ -117,7 +117,7 @@
     NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
     [parser parse];
     NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
-    [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:[NSNumber numberWithDouble:duration] waitUntilDone:NO];
+    [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:@(duration) waitUntilDone:NO];
     [self performSelectorOnMainThread:@selector(parseEnded) withObject:nil waitUntilDone:NO];
     self.currentString = nil;
     self.xmlData = nil;

@@ -25,12 +25,12 @@
 - (void)downloadAndParse:(NSURL *)url {
     
     done = NO;
-    self.parseFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    self.parseFormatter = [[NSDateFormatter alloc] init];
     [parseFormatter setDateStyle:NSDateFormatterLongStyle];
     [parseFormatter setTimeStyle:NSDateFormatterNoStyle];
     // necessary because iTunes RSS feed is not localized, so if the device region has been set to other than US
     // the date formatter must be set to US locale in order to parse the dates
-    [parseFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"US"] autorelease]];
+    [parseFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"US"]];
     self.xmlData = [NSMutableData data];
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:url];
@@ -115,9 +115,7 @@ static NSString *kName_ReleaseDate = @"itms:releasedate";
         [self performSelectorOnMainThread:@selector(parsedSong:) withObject:song waitUntilDone:NO];
         // performSelectorOnMainThread: will retain the object until the selector has been performed
         // so we can release our reference
-        [song release];
     }
-    [doc release];
     NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
     [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:[NSNumber numberWithDouble:duration] waitUntilDone:NO];
     [self performSelectorOnMainThread:@selector(parseEnded) withObject:nil waitUntilDone:NO];

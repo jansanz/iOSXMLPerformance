@@ -52,22 +52,17 @@
 
 @implementation AppDelegate
 
-- (void)dealloc {
-	[_tabBarController release];
-	[_window release];
-	[super dealloc];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {	
 	// Add the tab bar controller's current view as a subview of the window
     
     // Multiple screen sizes
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     UIViewController *viewController1, *viewController2;
     
-    viewController1 = [[[UINavigationController alloc] initWithRootViewController:[[[ParserChoiceViewController alloc] initWithNibName:@"ParserChoiceView" bundle:nil] autorelease]] autorelease];
-    viewController2 = [[[UINavigationController alloc] initWithRootViewController:[[[StatsViewController alloc] initWithNibName:@"StatsView" bundle:nil] autorelease]] autorelease];
+    viewController1 = [[UINavigationController alloc] initWithRootViewController:[[ParserChoiceViewController alloc] initWithNibName:@"ParserChoiceView" bundle:nil]];
+    viewController2 = [[UINavigationController alloc] initWithRootViewController:[[StatsViewController alloc] initWithNibName:@"StatsView" bundle:nil]];
     
     [viewController1.tabBarItem setImage:[UIImage imageNamed:@"XML"]];
     [viewController2.tabBarItem setImage:[UIImage imageNamed:@"Stat"]];
@@ -75,7 +70,7 @@
     [viewController1 setTitle:@"Parse"];
     [viewController2 setTitle:@"Stats"];
     
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[viewController1, viewController2];
     
     self.window.rootViewController = self.tabBarController;

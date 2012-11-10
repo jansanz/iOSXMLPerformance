@@ -52,11 +52,6 @@
 
 @synthesize song, dateFormatter;
 
-- (void)dealloc {
-    [dateFormatter release];
-    [song release];
-    [super dealloc];
-}
 
 - (NSDateFormatter *)dateFormatter {
     if (dateFormatter == nil) {
@@ -81,7 +76,7 @@
     static NSString *kCellIdentifier = @"SongDetailCell";
     UITableViewCell *cell = (UITableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:kCellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:kCellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     switch (indexPath.row) {

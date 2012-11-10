@@ -62,16 +62,10 @@
 
 @synthesize songs, parser;
 
-- (void)dealloc {
-    [songs release];
-    [detailController release];
-    [parser release];
-	[super dealloc];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIBarButtonItem *doneItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(returnToParserChoices)] autorelease];
+    UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(returnToParserChoices)];
     self.navigationItem.rightBarButtonItem = doneItem;
 }
 
@@ -136,7 +130,7 @@
         } break;
     }
     // Create the parser, set its delegate, and start it.
-    self.parser = [[[parserClass alloc] init] autorelease];      
+    self.parser = [[parserClass alloc] init];      
     parser.delegate = self;
     [parser start];
 }
@@ -149,7 +143,7 @@
     static NSString *kCellIdentifier = @"MyCell";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
         cell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }

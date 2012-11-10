@@ -8,6 +8,13 @@
 
 #import "TinyXML2Parser.h"
 
+@interface TinyXML2Parser() {
+    BOOL done;
+}
+
+@end
+
 @implementation TinyXML2Parser
+
 
 @end

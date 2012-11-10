@@ -56,9 +56,9 @@
     iTunesRSSParser *parser;
 }
 
-@property (nonatomic, retain) NSMutableArray *songs;
-@property (nonatomic, retain, readonly) DetailController *detailController;
-@property (nonatomic, retain) iTunesRSSParser *parser;
+@property (nonatomic, strong) NSMutableArray *songs;
+@property (nonatomic, strong, readonly) DetailController *detailController;
+@property (nonatomic, strong) iTunesRSSParser *parser;
 
 // Called by the ParserChoiceViewController based on the selected parser type.
 - (void)parseWithParserType:(XMLParserType)parserType;

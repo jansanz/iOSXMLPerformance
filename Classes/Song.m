@@ -51,13 +51,5 @@
 
 @synthesize title, artist, album, releaseDate, category;
 
-- (void)dealloc {
-    [title release];
-    [artist release];
-    [album release];
-    [releaseDate release];
-    [category release];
-    [super dealloc];
-}
 
 @end

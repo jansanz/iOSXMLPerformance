@@ -54,7 +54,7 @@
     Song *song;
 }
 
-@property (nonatomic, retain) Song *song;
-@property (nonatomic, readonly, retain) NSDateFormatter *dateFormatter;
+@property (nonatomic, strong) Song *song;
+@property (nonatomic, readonly, strong) NSDateFormatter *dateFormatter;
 
 @end

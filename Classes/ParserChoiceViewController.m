@@ -61,12 +61,6 @@
 
 @synthesize parserSelection;
 
-- (void)dealloc {
-    [songsNavigationController release];
-    [songsViewController release];
-    [parserSelection release];
-	[super dealloc];
-}
 
 - (void)viewDidLoad {
     
@@ -78,7 +72,7 @@
     
     [self setTitle:@"Parsers"];
     
-    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleDone target:self action:@selector(startParserButtonPressed:)] autorelease]];
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStyleDone target:self action:@selector(startParserButtonPressed:)]];
 }
 
 - (void)viewDidUnload {
@@ -113,7 +107,7 @@
     static NSString * const kCellIdentifier = @"MyCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
     }
     switch (indexPath.row) {
         case 0:

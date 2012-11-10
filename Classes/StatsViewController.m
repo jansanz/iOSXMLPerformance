@@ -61,10 +61,6 @@
 
 @synthesize tableView;
 
-- (void)dealloc {
-    [tableView release];
-	[super dealloc];
-}
 
 - (void)viewDidLoad {
     // We use a slightly shorter than usual row height so that all the statistics fit on the page without scrolling.
@@ -79,7 +75,7 @@
     
     [self setTitle:@"Stats"];
     
-    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc] initWithTitle:@"Reset" style:UIBarButtonItemStyleDone target:self action:@selector(resetButtonPressed:)] autorelease]];
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Reset" style:UIBarButtonItemStyleDone target:self action:@selector(resetButtonPressed:)]];
 }
 
 - (void)viewDidUnload {
@@ -102,7 +98,7 @@
     static NSString *kStatisticsCellID = @"StatisticsCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kStatisticsCellID];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kStatisticsCellID] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kStatisticsCellID];
     }
     switch (indexPath.row) {
         case 0: {

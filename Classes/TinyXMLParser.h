@@ -18,9 +18,9 @@
     
 }
 
-@property (nonatomic, retain) NSDateFormatter *parseFormatter;
-@property (nonatomic, retain) NSMutableData *xmlData;
-@property (nonatomic, retain) NSURLConnection *rssConnection;
+@property (nonatomic, strong) NSDateFormatter *parseFormatter;
+@property (nonatomic, strong) NSMutableData *xmlData;
+@property (nonatomic, strong) NSURLConnection *rssConnection;
 
 - (void)downloadAndParse:(NSURL *)url;
 

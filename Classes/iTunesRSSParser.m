@@ -73,10 +73,6 @@ static NSUInteger kCountForNotification = 10;
     [NSThread detachNewThreadSelector:@selector(downloadAndParse:) toTarget:self withObject:url];
 }
 
-- (void)dealloc {
-    [parsedSongs release];
-    [super dealloc];
-}
 
 - (void)downloadAndParse:(NSURL *)url {
     NSAssert([self isMemberOfClass:[iTunesRSSParser class]] == NO, @"Object is of abstract base class iTunesRSSParser");

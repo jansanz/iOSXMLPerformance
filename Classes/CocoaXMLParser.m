@@ -58,19 +58,19 @@
     return XMLParserTypeNSXMLParser;
 }
 
-@synthesize currentString, currentSong, parseFormatter, xmlData, rssConnection, downloadAndParsePool;
+@synthesize currentString, currentSong, parseFormatter, xmlData, rssConnection;
 
 - (void)downloadAndParse:(NSURL *)url {
-    //    self.downloadAndParsePool = [[NSAutoreleasePool alloc] init];
+
     @autoreleasepool {
         
         done = NO;
-        self.parseFormatter = [[[NSDateFormatter alloc] init] autorelease];
+        self.parseFormatter = [[NSDateFormatter alloc] init];
         [parseFormatter setDateStyle:NSDateFormatterLongStyle];
         [parseFormatter setTimeStyle:NSDateFormatterNoStyle];
         // necessary because iTunes RSS feed is not localized, so if the device region has been set to other than US
         // the date formatter must be set to US locale in order to parse the dates
-        [parseFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"US"] autorelease]];
+        [parseFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"US"]];
         self.xmlData = [NSMutableData data];
         [[NSURLCache sharedURLCache] removeAllCachedResponses];
         NSURLRequest *theRequest = [NSURLRequest requestWithURL:url];
@@ -85,8 +85,6 @@
         self.rssConnection = nil;
         self.parseFormatter = nil;
         self.currentSong = nil;
-        //    [downloadAndParsePool release];
-        //    self.downloadAndParsePool = nil;
     }
 }
 
@@ -121,7 +119,6 @@
     NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
     [self performSelectorOnMainThread:@selector(addToParseDuration:) withObject:[NSNumber numberWithDouble:duration] waitUntilDone:NO];
     [self performSelectorOnMainThread:@selector(parseEnded) withObject:nil waitUntilDone:NO];
-    [parser release];
     self.currentString = nil;
     self.xmlData = nil;
     // Set the condition which ends the run loop.
@@ -162,7 +159,7 @@ static NSString *kName_ReleaseDate = @"itms:releasedate";
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *) qualifiedName attributes:(NSDictionary *)attributeDict {
     if ([elementName isEqualToString:kName_Item]) {
-        self.currentSong = [[[Song alloc] init] autorelease];
+        self.currentSong = [[Song alloc] init];
     } else if ([elementName isEqualToString:kName_Title] || [elementName isEqualToString:kName_Category] || [elementName isEqualToString:kName_Artist] || [elementName isEqualToString:kName_Album] || [elementName isEqualToString:kName_ReleaseDate]) {
         [currentString setString:@""];
         storingCharacters = YES;

@@ -55,9 +55,9 @@
     NSIndexPath *parserSelection;
 }
 
-@property (nonatomic, retain, readonly) UINavigationController *songsNavigationController;
-@property (nonatomic, retain, readonly) SongsViewController *songsViewController;
-@property (nonatomic, retain) NSIndexPath *parserSelection;
+@property (nonatomic, strong, readonly) UINavigationController *songsNavigationController;
+@property (nonatomic, strong, readonly) SongsViewController *songsViewController;
+@property (nonatomic, strong) NSIndexPath *parserSelection;
 
 - (void)startParserButtonPressed:(id)sender;
 

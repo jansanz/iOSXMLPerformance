@@ -31,39 +31,41 @@
 		30EC98BF0E3A573E0042536C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EC98BE0E3A573E0042536C /* libsqlite3.dylib */; };
 		30F20C520EC3618100F74FAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30F20C500EC3618100F74FAC /* Localizable.strings */; };
 		3541B4491136D95E00298D56 /* LibXMLDOMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3541B4481136D95E00298D56 /* LibXMLDOMParser.m */; };
-		359956281135C9FE00BFD4B0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956251135C9FE00BFD4B0 /* NSDataAdditions.m */; };
+		359956281135C9FE00BFD4B0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956251135C9FE00BFD4B0 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3599562B1135CA2B00BFD4B0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599562A1135CA2B00BFD4B0 /* libz.dylib */; };
-		359956311135CA5D00BFD4B0 /* TBXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956301135CA5D00BFD4B0 /* TBXMLParser.m */; };
-		359956C61135D68E00BFD4B0 /* TouchXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956C51135D68E00BFD4B0 /* TouchXMLParser.m */; };
-		3599571A1135E02000BFD4B0 /* KissXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359957191135E02000BFD4B0 /* KissXMLParser.m */; };
-		3599576B1135E2FF00BFD4B0 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 359957651135E2FF00BFD4B0 /* tinyxmlparser.cpp */; };
-		3599576C1135E2FF00BFD4B0 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 359957661135E2FF00BFD4B0 /* tinyxmlerror.cpp */; };
-		3599576D1135E2FF00BFD4B0 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 359957681135E2FF00BFD4B0 /* tinyxml.cpp */; };
-		3599576E1135E2FF00BFD4B0 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3599576A1135E2FF00BFD4B0 /* tinystr.cpp */; };
+		359956311135CA5D00BFD4B0 /* TBXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956301135CA5D00BFD4B0 /* TBXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		359956C61135D68E00BFD4B0 /* TouchXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956C51135D68E00BFD4B0 /* TouchXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3599571A1135E02000BFD4B0 /* KissXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359957191135E02000BFD4B0 /* KissXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		359957731135E34700BFD4B0 /* TinyXMLParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 359957721135E34700BFD4B0 /* TinyXMLParser.mm */; };
-		359958971136106800BFD4B0 /* GDataXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359958961136106800BFD4B0 /* GDataXMLParser.m */; };
-		98C96BD91563454800AD793E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BD81563454800AD793E /* RXMLElement.m */; };
-		98C96BDD1563462B00AD793E /* RaptureXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BDC1563462B00AD793E /* RaptureXMLParser.m */; };
-		98C96C1F1563573B00AD793E /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C041563573B00AD793E /* CXMLDocument_CreationExtensions.m */; };
-		98C96C201563573C00AD793E /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C061563573B00AD793E /* CXMLNode_CreationExtensions.m */; };
-		98C96C211563573C00AD793E /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C081563573B00AD793E /* CXHTMLDocument.m */; };
-		98C96C221563573C00AD793E /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C0A1563573B00AD793E /* CXMLDocument_PrivateExtensions.m */; };
-		98C96C231563573C00AD793E /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C0C1563573B00AD793E /* CXMLDocument.m */; };
-		98C96C241563573C00AD793E /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C0E1563573B00AD793E /* CXMLElement_CreationExtensions.m */; };
-		98C96C251563573C00AD793E /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C101563573B00AD793E /* CXMLElement_ElementTreeExtensions.m */; };
-		98C96C261563573C00AD793E /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C121563573B00AD793E /* CXMLElement.m */; };
-		98C96C271563573C00AD793E /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C141563573B00AD793E /* CXMLNamespaceNode.m */; };
-		98C96C281563573C00AD793E /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C161563573B00AD793E /* CXMLNode_PrivateExtensions.m */; };
-		98C96C291563573C00AD793E /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C181563573B00AD793E /* CXMLNode_XPathExtensions.m */; };
-		98C96C2A1563573C00AD793E /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C1A1563573B00AD793E /* CXMLNode.m */; };
-		98C96C2B1563573C00AD793E /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C1D1563573B00AD793E /* CTidy.m */; };
-		98C96C2E1563592E00AD793E /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C2D1563592E00AD793E /* TBXML.m */; };
-		98C96C3F15635ACC00AD793E /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3215635ACC00AD793E /* DDXMLElementAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		98C96C4015635ACC00AD793E /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3515635ACC00AD793E /* NSString+DDXML.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		98C96C4115635ACC00AD793E /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3815635ACC00AD793E /* DDXMLDocument.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		98C96C4215635ACC00AD793E /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3A15635ACC00AD793E /* DDXMLElement.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		98C96C4315635ACC00AD793E /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3C15635ACC00AD793E /* DDXMLNode.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		98C96C4615635DA000AD793E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C4515635DA000AD793E /* GDataXMLNode.m */; };
+		359958971136106800BFD4B0 /* GDataXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359958961136106800BFD4B0 /* GDataXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98A56B3C164EDC6A009A4B8C /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B36164EDC6A009A4B8C /* tinystr.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98A56B3D164EDC6A009A4B8C /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B38164EDC6A009A4B8C /* tinyxml.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98A56B3E164EDC6A009A4B8C /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3A164EDC6A009A4B8C /* tinyxmlerror.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98A56B3F164EDC6A009A4B8C /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3B164EDC6A009A4B8C /* tinyxmlparser.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98A56B47164EF454009A4B8C /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B45164EF454009A4B8C /* tinyxml2.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98A56B4A164EF518009A4B8C /* TinyXML2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B49164EF518009A4B8C /* TinyXML2Parser.m */; };
+		98C96BD91563454800AD793E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BD81563454800AD793E /* RXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96BDD1563462B00AD793E /* RaptureXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BDC1563462B00AD793E /* RaptureXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C1F1563573B00AD793E /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C041563573B00AD793E /* CXMLDocument_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C201563573C00AD793E /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C061563573B00AD793E /* CXMLNode_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C211563573C00AD793E /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C081563573B00AD793E /* CXHTMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C221563573C00AD793E /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C0A1563573B00AD793E /* CXMLDocument_PrivateExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C231563573C00AD793E /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C0C1563573B00AD793E /* CXMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C241563573C00AD793E /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C0E1563573B00AD793E /* CXMLElement_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C251563573C00AD793E /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C101563573B00AD793E /* CXMLElement_ElementTreeExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C261563573C00AD793E /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C121563573B00AD793E /* CXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C271563573C00AD793E /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C141563573B00AD793E /* CXMLNamespaceNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C281563573C00AD793E /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C161563573B00AD793E /* CXMLNode_PrivateExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C291563573C00AD793E /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C181563573B00AD793E /* CXMLNode_XPathExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C2A1563573C00AD793E /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C1A1563573B00AD793E /* CXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C2B1563573C00AD793E /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C1D1563573B00AD793E /* CTidy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C2E1563592E00AD793E /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C2D1563592E00AD793E /* TBXML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96C3F15635ACC00AD793E /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3215635ACC00AD793E /* DDXMLElementAdditions.m */; };
+		98C96C4015635ACC00AD793E /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3515635ACC00AD793E /* NSString+DDXML.m */; };
+		98C96C4115635ACC00AD793E /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3815635ACC00AD793E /* DDXMLDocument.m */; };
+		98C96C4215635ACC00AD793E /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3A15635ACC00AD793E /* DDXMLElement.m */; };
+		98C96C4315635ACC00AD793E /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C3C15635ACC00AD793E /* DDXMLNode.m */; };
+		98C96C4615635DA000AD793E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C4515635DA000AD793E /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		98ED78811638F27300171FF5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98ED78801638F27300171FF5 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -115,17 +117,21 @@
 		359956C51135D68E00BFD4B0 /* TouchXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchXMLParser.m; sourceTree = "<group>"; };
 		359957181135E02000BFD4B0 /* KissXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KissXMLParser.h; sourceTree = "<group>"; };
 		359957191135E02000BFD4B0 /* KissXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KissXMLParser.m; sourceTree = "<group>"; };
-		359957651135E2FF00BFD4B0 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
-		359957661135E2FF00BFD4B0 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
-		359957671135E2FF00BFD4B0 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
-		359957681135E2FF00BFD4B0 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
-		359957691135E2FF00BFD4B0 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
-		3599576A1135E2FF00BFD4B0 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
 		359957711135E34700BFD4B0 /* TinyXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinyXMLParser.h; sourceTree = "<group>"; };
 		359957721135E34700BFD4B0 /* TinyXMLParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TinyXMLParser.mm; sourceTree = "<group>"; };
 		359958951136106800BFD4B0 /* GDataXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLParser.h; sourceTree = "<group>"; };
 		359958961136106800BFD4B0 /* GDataXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLParser.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98A56B36164EDC6A009A4B8C /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
+		98A56B37164EDC6A009A4B8C /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
+		98A56B38164EDC6A009A4B8C /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
+		98A56B39164EDC6A009A4B8C /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
+		98A56B3A164EDC6A009A4B8C /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
+		98A56B3B164EDC6A009A4B8C /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		98A56B45164EF454009A4B8C /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cpp; path = TinyXML2/tinyxml2.cpp; sourceTree = "<group>"; };
+		98A56B46164EF454009A4B8C /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml2.h; path = TinyXML2/tinyxml2.h; sourceTree = "<group>"; };
+		98A56B48164EF518009A4B8C /* TinyXML2Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinyXML2Parser.h; sourceTree = "<group>"; };
+		98A56B49164EF518009A4B8C /* TinyXML2Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TinyXML2Parser.m; sourceTree = "<group>"; };
 		98C96BD71563454800AD793E /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
 		98C96BD81563454800AD793E /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
 		98C96BDB1563462B00AD793E /* RaptureXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaptureXMLParser.h; sourceTree = "<group>"; };
@@ -226,6 +232,8 @@
 				359957191135E02000BFD4B0 /* KissXMLParser.m */,
 				359957711135E34700BFD4B0 /* TinyXMLParser.h */,
 				359957721135E34700BFD4B0 /* TinyXMLParser.mm */,
+				98A56B48164EF518009A4B8C /* TinyXML2Parser.h */,
+				98A56B49164EF518009A4B8C /* TinyXML2Parser.m */,
 				359958951136106800BFD4B0 /* GDataXMLParser.h */,
 				359958961136106800BFD4B0 /* GDataXMLParser.m */,
 				3541B4471136D95E00298D56 /* LibXMLDOMParser.h */,
@@ -245,12 +253,12 @@
 		29B97314FDCFA39411CA2CEA /* XMLPerformance */ = {
 			isa = PBXGroup;
 			children = (
+				98A56B34164EDC6A009A4B8C /* Parsers */,
 				98ED78801638F27300171FF5 /* Default-568h@2x.png */,
 				98C96C2F15635ACC00AD793E /* KissXML */,
 				98C96C011563571E00AD793E /* TouchXML */,
 				98C96BD61563454800AD793E /* RaptureXML */,
 				3599588F11360FFE00BFD4B0 /* GDataXML */,
-				3599575D1135E2DA00BFD4B0 /* TinyXML */,
 				359956231135C9EA00BFD4B0 /* TBXML */,
 				3013ACF00E5CD69000DFF042 /* ReadMe.txt */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -310,19 +318,6 @@
 			name = TBXML;
 			sourceTree = "<group>";
 		};
-		3599575D1135E2DA00BFD4B0 /* TinyXML */ = {
-			isa = PBXGroup;
-			children = (
-				359957651135E2FF00BFD4B0 /* tinyxmlparser.cpp */,
-				359957661135E2FF00BFD4B0 /* tinyxmlerror.cpp */,
-				359957671135E2FF00BFD4B0 /* tinyxml.h */,
-				359957681135E2FF00BFD4B0 /* tinyxml.cpp */,
-				359957691135E2FF00BFD4B0 /* tinystr.h */,
-				3599576A1135E2FF00BFD4B0 /* tinystr.cpp */,
-			);
-			name = TinyXML;
-			sourceTree = "<group>";
-		};
 		3599588F11360FFE00BFD4B0 /* GDataXML */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +325,37 @@
 				98C96C4515635DA000AD793E /* GDataXMLNode.m */,
 			);
 			name = GDataXML;
+			sourceTree = "<group>";
+		};
+		98A56B34164EDC6A009A4B8C /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				98A56B44164EF443009A4B8C /* TinyXML2 */,
+				98A56B35164EDC6A009A4B8C /* TinyXML */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		98A56B35164EDC6A009A4B8C /* TinyXML */ = {
+			isa = PBXGroup;
+			children = (
+				98A56B36164EDC6A009A4B8C /* tinystr.cpp */,
+				98A56B37164EDC6A009A4B8C /* tinystr.h */,
+				98A56B38164EDC6A009A4B8C /* tinyxml.cpp */,
+				98A56B39164EDC6A009A4B8C /* tinyxml.h */,
+				98A56B3A164EDC6A009A4B8C /* tinyxmlerror.cpp */,
+				98A56B3B164EDC6A009A4B8C /* tinyxmlparser.cpp */,
+			);
+			path = TinyXML;
+			sourceTree = "<group>";
+		};
+		98A56B44164EF443009A4B8C /* TinyXML2 */ = {
+			isa = PBXGroup;
+			children = (
+				98A56B45164EF454009A4B8C /* tinyxml2.cpp */,
+				98A56B46164EF454009A4B8C /* tinyxml2.h */,
+			);
+			name = TinyXML2;
 			sourceTree = "<group>";
 		};
 		98C96BD61563454800AD793E /* RaptureXML */ = {
@@ -524,10 +550,6 @@
 				359956311135CA5D00BFD4B0 /* TBXMLParser.m in Sources */,
 				359956C61135D68E00BFD4B0 /* TouchXMLParser.m in Sources */,
 				3599571A1135E02000BFD4B0 /* KissXMLParser.m in Sources */,
-				3599576B1135E2FF00BFD4B0 /* tinyxmlparser.cpp in Sources */,
-				3599576C1135E2FF00BFD4B0 /* tinyxmlerror.cpp in Sources */,
-				3599576D1135E2FF00BFD4B0 /* tinyxml.cpp in Sources */,
-				3599576E1135E2FF00BFD4B0 /* tinystr.cpp in Sources */,
 				359957731135E34700BFD4B0 /* TinyXMLParser.mm in Sources */,
 				359958971136106800BFD4B0 /* GDataXMLParser.m in Sources */,
 				3541B4491136D95E00298D56 /* LibXMLDOMParser.m in Sources */,
@@ -553,6 +575,12 @@
 				98C96C4215635ACC00AD793E /* DDXMLElement.m in Sources */,
 				98C96C4315635ACC00AD793E /* DDXMLNode.m in Sources */,
 				98C96C4615635DA000AD793E /* GDataXMLNode.m in Sources */,
+				98A56B3C164EDC6A009A4B8C /* tinystr.cpp in Sources */,
+				98A56B3D164EDC6A009A4B8C /* tinyxml.cpp in Sources */,
+				98A56B3E164EDC6A009A4B8C /* tinyxmlerror.cpp in Sources */,
+				98A56B3F164EDC6A009A4B8C /* tinyxmlparser.cpp in Sources */,
+				98A56B47164EF454009A4B8C /* tinyxml2.cpp in Sources */,
+				98A56B4A164EF518009A4B8C /* TinyXML2Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +642,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -631,6 +660,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;

@@ -77,7 +77,7 @@ typedef enum {
 
 
 @interface iTunesRSSParser : NSObject {
-    id <iTunesRSSParserDelegate> delegate;
+    id <iTunesRSSParserDelegate> __weak delegate;
     NSMutableArray *parsedSongs;
     // This time interval is used to measure the overall time the parser takes to download and parse XML.
     NSTimeInterval startTimeReference;
@@ -87,8 +87,8 @@ typedef enum {
     double totalDuration;
 }
 
-@property (nonatomic, assign) id <iTunesRSSParserDelegate> delegate;
-@property (nonatomic, retain) NSMutableArray *parsedSongs;
+@property (nonatomic, weak) id <iTunesRSSParserDelegate> delegate;
+@property (nonatomic, strong) NSMutableArray *parsedSongs;
 @property NSTimeInterval startTimeReference;
 @property NSTimeInterval downloadStartTimeReference;
 @property double parseDuration;

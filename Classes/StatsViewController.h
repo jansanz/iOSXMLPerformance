@@ -52,7 +52,7 @@
     UITableView *tableView;
 }
 
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 // Action method for the button that resets statistics.
 - (void)resetButtonPressed:(id)sender;

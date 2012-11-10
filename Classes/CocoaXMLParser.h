@@ -62,16 +62,13 @@
     // The number of parsed songs is tracked so that the autorelease pool for the parsing thread can be periodically
     // emptied to keep the memory footprint under control. 
     NSUInteger countOfParsedSongs;
-    NSAutoreleasePool *downloadAndParsePool;
 }
 
-@property (nonatomic, retain) NSMutableString *currentString;
-@property (nonatomic, retain) Song *currentSong;
-@property (nonatomic, retain) NSDateFormatter *parseFormatter;
-@property (nonatomic, retain) NSMutableData *xmlData;
-@property (nonatomic, retain) NSURLConnection *rssConnection;
-// The autorelease pool property is assign because autorelease pools cannot be retained.
-@property (nonatomic, assign) NSAutoreleasePool *downloadAndParsePool;
+@property (nonatomic, strong) NSMutableString *currentString;
+@property (nonatomic, strong) Song *currentSong;
+@property (nonatomic, strong) NSDateFormatter *parseFormatter;
+@property (nonatomic, strong) NSMutableData *xmlData;
+@property (nonatomic, strong) NSURLConnection *rssConnection;
 
 - (void)downloadAndParse:(NSURL *)url;
 

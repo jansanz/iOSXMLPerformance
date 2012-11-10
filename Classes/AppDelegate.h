@@ -49,7 +49,7 @@
 
 @interface AppDelegate : NSObject <UIApplicationDelegate>
 
-@property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) UITabBarController *tabBarController;
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) UITabBarController *tabBarController;
 
 @end

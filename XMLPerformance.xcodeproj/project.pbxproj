@@ -7,45 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; settings = {COMPILER_FLAGS = ""; }; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {COMPILER_FLAGS = ""; }; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		28216C970DB411BC00E5133A /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* StatsViewController.m */; };
+		28216C970DB411BC00E5133A /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* StatsViewController.m */; settings = {COMPILER_FLAGS = ""; }; };
 		3013ACCB0E5CD0BC00DFF042 /* Stat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3013ACC60E5CD0BC00DFF042 /* Stat.png */; };
 		3013ACCC0E5CD0BC00DFF042 /* XML.png in Resources */ = {isa = PBXBuildFile; fileRef = 3013ACC80E5CD0BC00DFF042 /* XML.png */; };
 		3013ADBC0E5E099600DFF042 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3013ADBA0E5E099600DFF042 /* Default.png */; };
 		3097D68C0E392CCC00159D5D /* StatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3097D6890E392CCC00159D5D /* StatsView.xib */; };
-		3097D6920E392ED500159D5D /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D6910E392ED500159D5D /* SongsViewController.m */; };
-		3097D6B40E392FAD00159D5D /* ParserChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D6B30E392FAD00159D5D /* ParserChoiceViewController.m */; };
+		3097D6920E392ED500159D5D /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D6910E392ED500159D5D /* SongsViewController.m */; settings = {COMPILER_FLAGS = ""; }; };
+		3097D6B40E392FAD00159D5D /* ParserChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D6B30E392FAD00159D5D /* ParserChoiceViewController.m */; settings = {COMPILER_FLAGS = ""; }; };
 		3097D6EF0E3939E700159D5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3097D6EE0E3939E700159D5D /* CoreGraphics.framework */; };
-		3097D70A0E393EAE00159D5D /* iTunesRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D7090E393EAE00159D5D /* iTunesRSSParser.m */; };
-		3097D71B0E39427200159D5D /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D71A0E39427200159D5D /* Song.m */; };
-		3097D7260E39451800159D5D /* LibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D7230E39451800159D5D /* LibXMLParser.m */; };
-		3097D7270E39451800159D5D /* CocoaXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D7250E39451800159D5D /* CocoaXMLParser.m */; };
+		3097D70A0E393EAE00159D5D /* iTunesRSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D7090E393EAE00159D5D /* iTunesRSSParser.m */; settings = {COMPILER_FLAGS = ""; }; };
+		3097D71B0E39427200159D5D /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D71A0E39427200159D5D /* Song.m */; settings = {COMPILER_FLAGS = ""; }; };
+		3097D7260E39451800159D5D /* LibXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D7230E39451800159D5D /* LibXMLParser.m */; settings = {COMPILER_FLAGS = ""; }; };
+		3097D7270E39451800159D5D /* CocoaXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D7250E39451800159D5D /* CocoaXMLParser.m */; settings = {COMPILER_FLAGS = ""; }; };
 		3097D72A0E39487200159D5D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3097D7290E39487200159D5D /* libxml2.dylib */; };
-		3097D7390E394B0600159D5D /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D7380E394B0600159D5D /* DetailController.m */; };
-		309C4B890E844795007F2FBA /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C4B880E844795007F2FBA /* Statistics.m */; };
+		3097D7390E394B0600159D5D /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3097D7380E394B0600159D5D /* DetailController.m */; settings = {COMPILER_FLAGS = ""; }; };
+		309C4B890E844795007F2FBA /* Statistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 309C4B880E844795007F2FBA /* Statistics.m */; settings = {COMPILER_FLAGS = ""; }; };
 		30CB63DE0FBB5A1200E8B09E /* ParserChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30CB63DC0FBB5A1200E8B09E /* ParserChoiceView.xib */; };
 		30EC989A0E3A507B0042536C /* stats.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 30EC98990E3A507B0042536C /* stats.sqlite */; };
 		30EC98BF0E3A573E0042536C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EC98BE0E3A573E0042536C /* libsqlite3.dylib */; };
 		30F20C520EC3618100F74FAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30F20C500EC3618100F74FAC /* Localizable.strings */; };
-		3541B4491136D95E00298D56 /* LibXMLDOMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3541B4481136D95E00298D56 /* LibXMLDOMParser.m */; };
-		359956281135C9FE00BFD4B0 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956251135C9FE00BFD4B0 /* NSDataAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3541B4491136D95E00298D56 /* LibXMLDOMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3541B4481136D95E00298D56 /* LibXMLDOMParser.m */; settings = {COMPILER_FLAGS = ""; }; };
 		3599562B1135CA2B00BFD4B0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3599562A1135CA2B00BFD4B0 /* libz.dylib */; };
-		359956311135CA5D00BFD4B0 /* TBXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956301135CA5D00BFD4B0 /* TBXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		359956C61135D68E00BFD4B0 /* TouchXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956C51135D68E00BFD4B0 /* TouchXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3599571A1135E02000BFD4B0 /* KissXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359957191135E02000BFD4B0 /* KissXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		359956311135CA5D00BFD4B0 /* TBXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956301135CA5D00BFD4B0 /* TBXMLParser.m */; };
+		359956C61135D68E00BFD4B0 /* TouchXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359956C51135D68E00BFD4B0 /* TouchXMLParser.m */; };
+		3599571A1135E02000BFD4B0 /* KissXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359957191135E02000BFD4B0 /* KissXMLParser.m */; };
 		359957731135E34700BFD4B0 /* TinyXMLParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 359957721135E34700BFD4B0 /* TinyXMLParser.mm */; };
-		359958971136106800BFD4B0 /* GDataXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359958961136106800BFD4B0 /* GDataXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		98A56B3C164EDC6A009A4B8C /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B36164EDC6A009A4B8C /* tinystr.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		98A56B3D164EDC6A009A4B8C /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B38164EDC6A009A4B8C /* tinyxml.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		98A56B3E164EDC6A009A4B8C /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3A164EDC6A009A4B8C /* tinyxmlerror.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		98A56B3F164EDC6A009A4B8C /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3B164EDC6A009A4B8C /* tinyxmlparser.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		98A56B47164EF454009A4B8C /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B45164EF454009A4B8C /* tinyxml2.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		98A56B4A164EF518009A4B8C /* TinyXML2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B49164EF518009A4B8C /* TinyXML2Parser.m */; };
+		359958971136106800BFD4B0 /* GDataXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 359958961136106800BFD4B0 /* GDataXMLParser.m */; };
+		98A56B3C164EDC6A009A4B8C /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B36164EDC6A009A4B8C /* tinystr.cpp */; };
+		98A56B3D164EDC6A009A4B8C /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B38164EDC6A009A4B8C /* tinyxml.cpp */; };
+		98A56B3E164EDC6A009A4B8C /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3A164EDC6A009A4B8C /* tinyxmlerror.cpp */; };
+		98A56B3F164EDC6A009A4B8C /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3B164EDC6A009A4B8C /* tinyxmlparser.cpp */; };
+		98A56B47164EF454009A4B8C /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B45164EF454009A4B8C /* tinyxml2.cpp */; };
+		98A56B4A164EF518009A4B8C /* TinyXML2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B49164EF518009A4B8C /* TinyXML2Parser.m */; settings = {COMPILER_FLAGS = ""; }; };
 		98C96BD91563454800AD793E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BD81563454800AD793E /* RXMLElement.m */; };
-		98C96BDD1563462B00AD793E /* RaptureXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BDC1563462B00AD793E /* RaptureXMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98C96BDD1563462B00AD793E /* RaptureXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BDC1563462B00AD793E /* RaptureXMLParser.m */; };
 		98C96C1F1563573B00AD793E /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C041563573B00AD793E /* CXMLDocument_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		98C96C201563573C00AD793E /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C061563573B00AD793E /* CXMLNode_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		98C96C211563573C00AD793E /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C081563573B00AD793E /* CXHTMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -108,8 +107,6 @@
 		30F20C510EC3618100F74FAC /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3541B4471136D95E00298D56 /* LibXMLDOMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibXMLDOMParser.h; sourceTree = "<group>"; };
 		3541B4481136D95E00298D56 /* LibXMLDOMParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibXMLDOMParser.m; sourceTree = "<group>"; };
-		359956241135C9FE00BFD4B0 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
-		359956251135C9FE00BFD4B0 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
 		3599562A1135CA2B00BFD4B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3599562F1135CA5D00BFD4B0 /* TBXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXMLParser.h; sourceTree = "<group>"; };
 		359956301135CA5D00BFD4B0 /* TBXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXMLParser.m; sourceTree = "<group>"; };
@@ -312,8 +309,6 @@
 			children = (
 				98C96C2D1563592E00AD793E /* TBXML.m */,
 				98C96C2C1563592600AD793E /* TBXML.h */,
-				359956241135C9FE00BFD4B0 /* NSDataAdditions.h */,
-				359956251135C9FE00BFD4B0 /* NSDataAdditions.m */,
 			);
 			name = TBXML;
 			sourceTree = "<group>";
@@ -546,7 +541,6 @@
 				3097D7270E39451800159D5D /* CocoaXMLParser.m in Sources */,
 				3097D7390E394B0600159D5D /* DetailController.m in Sources */,
 				309C4B890E844795007F2FBA /* Statistics.m in Sources */,
-				359956281135C9FE00BFD4B0 /* NSDataAdditions.m in Sources */,
 				359956311135CA5D00BFD4B0 /* TBXMLParser.m in Sources */,
 				359956C61135D68E00BFD4B0 /* TouchXMLParser.m in Sources */,
 				3599571A1135E02000BFD4B0 /* KissXMLParser.m in Sources */,

@@ -57,6 +57,7 @@
 #import "GDataXMLParser.h"
 #import "LibXMLDOMParser.h"
 #import "RaptureXMLParser.h"
+#import "TinyXML2Parser.h"
 
 @implementation SongsViewController
 
@@ -124,6 +125,9 @@
         } break;
         case XMLParserTypeRaptureXMLParser: {
             parserClass = [RaptureXMLParser class];
+        } break;
+        case XMLParserTypeTinyXML2Parser: {
+            parserClass = [TinyXML2Parser class];
         } break;
         default: {
             NSAssert1(NO, @"Unknown parser type %d", parserType);

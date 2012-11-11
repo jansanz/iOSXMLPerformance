@@ -56,6 +56,7 @@
 #import "GDataXMLParser.h"
 #import "LibXMLDOMParser.h"
 #import "RaptureXMLParser.h"
+#import "TinyXML2Parser.h"
 
 @implementation StatsViewController
 
@@ -87,7 +88,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 9;
+    return 10;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -148,6 +149,9 @@
             break;
         case 8:
             parserName = [RaptureXMLParser parserName];
+            break;
+        case 9:
+            parserName = [TinyXML2Parser parserName];
             break;
     }
     

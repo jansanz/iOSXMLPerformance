@@ -41,8 +41,8 @@
 		98A56B3D164EDC6A009A4B8C /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B38164EDC6A009A4B8C /* tinyxml.cpp */; };
 		98A56B3E164EDC6A009A4B8C /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3A164EDC6A009A4B8C /* tinyxmlerror.cpp */; };
 		98A56B3F164EDC6A009A4B8C /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B3B164EDC6A009A4B8C /* tinyxmlparser.cpp */; };
-		98A56B47164EF454009A4B8C /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B45164EF454009A4B8C /* tinyxml2.cpp */; };
-		98A56B4A164EF518009A4B8C /* TinyXML2Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B49164EF518009A4B8C /* TinyXML2Parser.m */; settings = {COMPILER_FLAGS = ""; }; };
+		98A56B47164EF454009A4B8C /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B45164EF454009A4B8C /* tinyxml2.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		98A56B4A164EF518009A4B8C /* TinyXML2Parser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 98A56B49164EF518009A4B8C /* TinyXML2Parser.mm */; settings = {COMPILER_FLAGS = ""; }; };
 		98C96BD91563454800AD793E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BD81563454800AD793E /* RXMLElement.m */; };
 		98C96BDD1563462B00AD793E /* RaptureXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96BDC1563462B00AD793E /* RaptureXMLParser.m */; };
 		98C96C1F1563573B00AD793E /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C96C041563573B00AD793E /* CXMLDocument_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -128,7 +128,7 @@
 		98A56B45164EF454009A4B8C /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cpp; path = TinyXML2/tinyxml2.cpp; sourceTree = "<group>"; };
 		98A56B46164EF454009A4B8C /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinyxml2.h; path = TinyXML2/tinyxml2.h; sourceTree = "<group>"; };
 		98A56B48164EF518009A4B8C /* TinyXML2Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinyXML2Parser.h; sourceTree = "<group>"; };
-		98A56B49164EF518009A4B8C /* TinyXML2Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TinyXML2Parser.m; sourceTree = "<group>"; };
+		98A56B49164EF518009A4B8C /* TinyXML2Parser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TinyXML2Parser.mm; sourceTree = "<group>"; };
 		98C96BD71563454800AD793E /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
 		98C96BD81563454800AD793E /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
 		98C96BDB1563462B00AD793E /* RaptureXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaptureXMLParser.h; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 				359957711135E34700BFD4B0 /* TinyXMLParser.h */,
 				359957721135E34700BFD4B0 /* TinyXMLParser.mm */,
 				98A56B48164EF518009A4B8C /* TinyXML2Parser.h */,
-				98A56B49164EF518009A4B8C /* TinyXML2Parser.m */,
+				98A56B49164EF518009A4B8C /* TinyXML2Parser.mm */,
 				359958951136106800BFD4B0 /* GDataXMLParser.h */,
 				359958961136106800BFD4B0 /* GDataXMLParser.m */,
 				3541B4471136D95E00298D56 /* LibXMLDOMParser.h */,
@@ -574,7 +574,7 @@
 				98A56B3E164EDC6A009A4B8C /* tinyxmlerror.cpp in Sources */,
 				98A56B3F164EDC6A009A4B8C /* tinyxmlparser.cpp in Sources */,
 				98A56B47164EF454009A4B8C /* tinyxml2.cpp in Sources */,
-				98A56B4A164EF518009A4B8C /* TinyXML2Parser.m in Sources */,
+				98A56B4A164EF518009A4B8C /* TinyXML2Parser.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

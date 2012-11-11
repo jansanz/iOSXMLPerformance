@@ -56,6 +56,7 @@
 #import "GDataXMLParser.h"
 #import "LibXMLDOMParser.h"
 #import "RaptureXMLParser.h"
+#import "TinyXML2Parser.h"
 
 @implementation ParserChoiceViewController
 
@@ -100,7 +101,7 @@
 }
 
 - (NSUInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSUInteger)section {
-    return 9;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -136,6 +137,9 @@
             break;
         case 8:
             cell.textLabel.text = [RaptureXMLParser parserName];
+            break;
+        case 9:
+            cell.textLabel.text = [TinyXML2Parser parserName];
             break;
     }
     cell.accessoryType = ([indexPath isEqual:parserSelection]) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;

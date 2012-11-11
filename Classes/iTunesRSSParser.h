@@ -57,7 +57,8 @@ typedef enum {
     XMLParserTypeTinyXMLParser,
     XMLParserTypeGDataXMLParser,
     XMLParserTypeLibXMLDOMParser,
-    XMLParserTypeRaptureXMLParser
+    XMLParserTypeRaptureXMLParser,
+    XMLParserTypeTinyXML2Parser
 } XMLParserType;
 
 @class iTunesRSSParser, Song;

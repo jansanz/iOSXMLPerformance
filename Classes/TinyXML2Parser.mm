@@ -84,42 +84,42 @@
     
     NSLog(@"%s", buffer);
     
-    tinyxml2::XMLDocument * doc;
+    tinyxml2::XMLDocument * doc = new tinyxml2::XMLDocument();
     doc->Parse(buffer);
     
     tinyxml2::XMLHandle docHandle( doc );
-//
-//    tinyxml2::XMLElement* item = docHandle.FirstChildElement( "rss" ).FirstChildElement( "channel" ).FirstChildElement( "item" ).ToElement();
-//    
-//    while (item != NULL) {
-//        Song *song = [[Song alloc] init];
-//        
-//        tinyxml2::XMLElement *title = item->FirstChildElement("title");
-//        if (title != NULL) {
-//            song.title = [NSString stringWithUTF8String:title->GetText()];
-//        }
-//        tinyxml2::XMLElement *category = item->FirstChildElement("category");
-//        if (category != NULL) {
-//            song.category = [NSString stringWithUTF8String:category->GetText()];
-//        }
-//        tinyxml2::XMLElement *artist = item->FirstChildElement("itms:artist");
-//        if (artist != NULL) {
-//            song.artist = [NSString stringWithUTF8String:artist->GetText()];
-//        }
-//        tinyxml2::XMLElement *album = item->FirstChildElement("itms:album");
-//        if (album != NULL) {
-//            song.album = [NSString stringWithUTF8String:album->GetText()];
-//        }
-//        tinyxml2::XMLElement *releaseDate = item->FirstChildElement("itms:releasedate");
-//        if (releaseDate != NULL) {
-//            NSString *releaseDateStr = [NSString stringWithUTF8String:releaseDate->GetText()];
-//            song.releaseDate = [_parseFormatter dateFromString:releaseDateStr];
-//        }
-//        item = item->NextSiblingElement();
-//        [self performSelectorOnMainThread:@selector(parsedSong:) withObject:song waitUntilDone:NO];
-//        // performSelectorOnMainThread: will retain the object until the selector has been performed
-//        // so we can release our reference
-//    }
+
+    tinyxml2::XMLElement* item = docHandle.FirstChildElement( "rss" ).FirstChildElement( "channel" ).FirstChildElement( "item" ).ToElement();
+    
+    while (item != NULL) {
+        Song *song = [[Song alloc] init];
+        
+        tinyxml2::XMLElement *title = item->FirstChildElement("title");
+        if (title != NULL) {
+            song.title = [NSString stringWithUTF8String:title->GetText()];
+        }
+        tinyxml2::XMLElement *category = item->FirstChildElement("category");
+        if (category != NULL) {
+            song.category = [NSString stringWithUTF8String:category->GetText()];
+        }
+        tinyxml2::XMLElement *artist = item->FirstChildElement("itms:artist");
+        if (artist != NULL) {
+            song.artist = [NSString stringWithUTF8String:artist->GetText()];
+        }
+        tinyxml2::XMLElement *album = item->FirstChildElement("itms:album");
+        if (album != NULL) {
+            song.album = [NSString stringWithUTF8String:album->GetText()];
+        }
+        tinyxml2::XMLElement *releaseDate = item->FirstChildElement("itms:releasedate");
+        if (releaseDate != NULL) {
+            NSString *releaseDateStr = [NSString stringWithUTF8String:releaseDate->GetText()];
+            song.releaseDate = [_parseFormatter dateFromString:releaseDateStr];
+        }
+        item = item->NextSiblingElement();
+        [self performSelectorOnMainThread:@selector(parsedSong:) withObject:song waitUntilDone:NO];
+        // performSelectorOnMainThread: will retain the object until the selector has been performed
+        // so we can release our reference
+    }
     
     delete [] buffer;
     delete doc;

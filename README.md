@@ -6,7 +6,7 @@ which in turn is based on Apple's [XMLPerformance](http://developer.apple.com/li
 
 Support for RaptureXML, TinyXML2 was added as well as all XML parsing libraries have been updated to their latest versions.
 
-ARC required. Some XML parsing libraries might not be ARC enabled.
+ARC required. Some XML parsing libraries do not use ARC.
 
 ## **Instructions**
 1. Clone this project
@@ -25,4 +25,4 @@ ARC required. Some XML parsing libraries might not be ARC enabled.
 - TinyXML2
 
 ## Future Plans
-- Fully revamp this test, there is no need for downloading the file. Include few XML samples, both smaller and bigger
+- Fully revamp this test, there is no need for downloading the file over the internet. Include few XML samples, both smaller and bigger

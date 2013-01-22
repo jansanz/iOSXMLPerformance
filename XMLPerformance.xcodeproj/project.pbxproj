@@ -647,6 +647,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = XMLPerformance;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -663,6 +664,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = XMLPerformance;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

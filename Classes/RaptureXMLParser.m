@@ -84,10 +84,8 @@ static NSString *kName_ReleaseDate = @"releasedate";
     
     RXMLElement *rootXML = [RXMLElement elementFromXMLData:xmlData];
     
-    __block Song *song = nil;
-    
     [rootXML iterateWithRootXPath:kXPath_Item usingBlock:^(RXMLElement *item) {
-        song = [[Song alloc] init];
+        Song *song = [[Song alloc] init];
         
         song.title = [item child:kName_Title].text;
         song.category = [item child:kName_Category].text;

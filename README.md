@@ -1,6 +1,8 @@
 iOS XMLPerformance
 =================
 
+Benchmark results and more information in my [blog post](http://jansanchez.com/blog/2013/01/22/state-of-ios-xml-libraries-in-2013/).
+
 XML Parser performance on iOS. Based on code take from [this blog post](http://www.raywenderlich.com/553/how-to-chose-the-best-xml-parser-for-your-iphone-project)
 which in turn is based on Apple's [XMLPerformance](http://developer.apple.com/library/ios/#samplecode/XMLPerformance/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008094-Intro-DontLinkElementID_2).
 
